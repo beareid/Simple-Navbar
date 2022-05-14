@@ -1,0 +1,50 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial;
+}
+
+/* NavBar */
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Barnd Title */
+.brand-title {
+  font-size: 2rem;
+  margin: .5rem;
+}
+
+/* Links */
+.navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  /* Making this block helps with the hover area being larger*/
+  display: block;
+}
+
+.navbar-links li a:hover {
+  background-color: #555;
+}
