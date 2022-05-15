@@ -26,7 +26,7 @@ body {
   margin: .5rem;
 }
 
-/* Links */
+/* NavBar Links */
 .navbar-links ul{
   margin: 0;
   padding: 0;
@@ -47,4 +47,64 @@ body {
 
 .navbar-links li a:hover {
   background-color: #555;
+}
+
+/* Tpggle Button */
+.toggle-button {
+  height: 21px;
+  width: 30px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.toggle-button .bar{
+  background-color: white;
+  border-radius: 10px;
+  height: 3px;
+  width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  /* Displays the toggle button when the screen gets to a mobile size */
+  .toggle-button {
+    display: flex;
+  }
+
+  /* Hides the navbar links when the screen gets to a mobile size */
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  /* Aligns brand name and navbar links in a column and pushs the content to the start */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+/* Aligns the navbar links in a column */
+  .navbar ul {
+    flex-direction: column;
+    /* Both navbar-links and nabar ul need to take up 100% of the width for the links to be clickable */
+    width: 100%;
+  }
+
+  /* Centers navbar link text */
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: .5rem 1rem;
+  }
+
+  /* Used to activate the links when the toggle button is clicked */
+  .navbar-links.active {
+    display: flex;
+  }
 }
